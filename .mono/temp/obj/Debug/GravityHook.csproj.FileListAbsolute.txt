@@ -1,0 +1,8 @@
+/home/calista/Desktop/Calista/GodotProjects/GravityHook/.mono/temp/obj/Debug/GravityHook.csprojAssemblyReference.cache
+/home/calista/Desktop/Calista/GodotProjects/GravityHook/.mono/temp/obj/Debug/GravityHook.AssemblyInfoInputs.cache
+/home/calista/Desktop/Calista/GodotProjects/GravityHook/.mono/temp/obj/Debug/GravityHook.AssemblyInfo.cs
+/home/calista/Desktop/Calista/GodotProjects/GravityHook/.mono/temp/obj/Debug/GravityHook.csproj.CoreCompileInputs.cache
+/home/calista/Desktop/Calista/GodotProjects/GravityHook/.mono/temp/bin/Debug/GravityHook.dll
+/home/calista/Desktop/Calista/GodotProjects/GravityHook/.mono/temp/bin/Debug/GravityHook.pdb
+/home/calista/Desktop/Calista/GodotProjects/GravityHook/.mono/temp/obj/Debug/GravityHook.dll
+/home/calista/Desktop/Calista/GodotProjects/GravityHook/.mono/temp/obj/Debug/GravityHook.pdb

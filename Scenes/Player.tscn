@@ -1,0 +1,145 @@
+[gd_scene load_steps=15 format=2]
+
+[ext_resource path="res://Assets/Player_Land.png" type="Texture" id=1]
+[ext_resource path="res://Assets/Player_Float.png" type="Texture" id=2]
+[ext_resource path="res://Scripts/Player.cs" type="Script" id=3]
+[ext_resource path="res://Assets/color.shader" type="Shader" id=4]
+[ext_resource path="res://Scenes/Hook.tscn" type="PackedScene" id=5]
+
+[sub_resource type="ShaderMaterial" id=1]
+shader = ExtResource( 4 )
+shader_param/color = Color( 0.0823529, 0.886275, 0.901961, 1 )
+
+[sub_resource type="SpriteFrames" id=2]
+animations = [ {
+"frames": [ ExtResource( 2 ) ],
+"loop": true,
+"name": "Jump",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 1 ) ],
+"loop": true,
+"name": "Land",
+"speed": 5.0
+} ]
+
+[sub_resource type="Curve" id=3]
+_data = [ Vector2( 0.0144231, 0.492045 ), 0.0, 0.0, 0, 0, Vector2( 1, 0.182955 ), 0.0, 0.0, 0, 0 ]
+
+[sub_resource type="Gradient" id=4]
+offsets = PoolRealArray( 0.0810811, 0.621622 )
+colors = PoolColorArray( 0.12207, 0.976562, 0.916481, 1, 0.0862745, 0.533333, 0.752941, 0.0431373 )
+
+[sub_resource type="CircleShape2D" id=5]
+radius = 27.0368
+
+[sub_resource type="Curve" id=6]
+_data = [ Vector2( 0.00431034, 0.490909 ), 0.0, 0.0, 0, 0, Vector2( 0.74569, 0.963636 ), 0.0, 0.0, 0, 0 ]
+
+[sub_resource type="Gradient" id=7]
+offsets = PoolRealArray( 0.0597015, 0.865672 )
+colors = PoolColorArray( 0, 0.858824, 1, 0.156863, 0.10553, 0.582181, 0.964844, 1 )
+
+[sub_resource type="Animation" id=8]
+resource_name = "Floating"
+length = 0.7
+loop = true
+step = 0.01
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.35 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 0.721569, 1, 1 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath(".:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 1, 1 ) ]
+}
+
+[sub_resource type="Animation" id=9]
+resource_name = "Orbiting"
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ) ]
+}
+
+[node name="Player" type="Area2D"]
+modulate = Color( 1, 0.992045, 1, 1 )
+script = ExtResource( 3 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+material = SubResource( 1 )
+frames = SubResource( 2 )
+animation = "Land"
+
+[node name="CPUParticles2D" type="CPUParticles2D" parent="AnimatedSprite"]
+visible = false
+position = Vector2( -17.2306, 0 )
+emitting = false
+amount = 10
+lifetime = 0.3
+one_shot = true
+local_coords = false
+texture = ExtResource( 2 )
+spread = 127.0
+gravity = Vector2( 0, 0 )
+initial_velocity = 400.0
+scale_amount_curve = SubResource( 3 )
+color_ramp = SubResource( 4 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource( 5 )
+
+[node name="Trail" type="Node" parent="."]
+
+[node name="Line" type="Line2D" parent="Trail"]
+z_index = -1
+width = 30.0
+width_curve = SubResource( 6 )
+default_color = Color( 0.4, 0.501961, 1, 1 )
+gradient = SubResource( 7 )
+joint_mode = 2
+begin_cap_mode = 2
+end_cap_mode = 1
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 2.0
+
+[node name="Tween" type="Tween" parent="."]
+
+[node name="Hook" parent="." instance=ExtResource( 5 )]
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+anims/Floating = SubResource( 8 )
+anims/Orbiting = SubResource( 9 )
+
+[node name="VisibilityNotifier2D" type="VisibilityNotifier2D" parent="."]
+position = Vector2( 1.60933e-06, -1.43051e-06 )
+scale = Vector2( 2.26992, 2.30961 )
+[connection signal="area_entered" from="." to="." method="_on_Player_area_entered"]
+[connection signal="body_entered" from="." to="." method="_on_Player_body_entered"]
+[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
+[connection signal="screen_exited" from="VisibilityNotifier2D" to="." method="_on_VisibilityNotifier2D_screen_exited"]

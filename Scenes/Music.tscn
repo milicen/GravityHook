@@ -1,0 +1,14 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Musics/music_zapsplat_game_music_zen_calm_soft_arpeggios_013.ogg" type="AudioStream" id=2]
+[ext_resource path="res://Musics/zapsplat_multimedia_game_tone_short_bright_futuristic_beep_with_delay_action_tone_001_59162.ogg" type="AudioStream" id=4]
+[ext_resource path="res://Scripts/Musics.cs" type="Script" id=5]
+
+[node name="Music" type="Node"]
+script = ExtResource( 5 )
+
+[node name="BGM" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 2 )
+
+[node name="SFX" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 4 )

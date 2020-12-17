@@ -1,0 +1,50 @@
+{
+  "format": 1,
+  "restore": {
+    "/home/calista/Desktop/Calista/GodotProjects/GravityHook/GravityHook.csproj": {}
+  },
+  "projects": {
+    "/home/calista/Desktop/Calista/GodotProjects/GravityHook/GravityHook.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/home/calista/Desktop/Calista/GodotProjects/GravityHook/GravityHook.csproj",
+        "projectName": "GravityHook",
+        "projectPath": "/home/calista/Desktop/Calista/GodotProjects/GravityHook/GravityHook.csproj",
+        "packagesPath": "/home/calista/.nuget/packages/",
+        "outputPath": "/home/calista/Desktop/Calista/GodotProjects/GravityHook/.mono/temp/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/home/calista/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net472"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net472": {
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net472": {
+          "dependencies": {
+            "Microsoft.NETFramework.ReferenceAssemblies": {
+              "target": "Package",
+              "version": "[1.0.0, )",
+              "autoReferenced": true
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/3.1.404/RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

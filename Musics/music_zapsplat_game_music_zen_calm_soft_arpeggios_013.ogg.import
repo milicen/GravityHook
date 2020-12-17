@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/music_zapsplat_game_music_zen_calm_soft_arpeggios_013.ogg-bef28f27307961e2f457153623e8f114.oggstr"
+
+[deps]
+
+source_file="res://Musics/music_zapsplat_game_music_zen_calm_soft_arpeggios_013.ogg"
+dest_files=[ "res://.import/music_zapsplat_game_music_zen_calm_soft_arpeggios_013.ogg-bef28f27307961e2f457153623e8f114.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

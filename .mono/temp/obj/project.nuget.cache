@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "IXlBVjTdunkG+TpA2EPVgrfRioI8e2/0eSVm75D/GFFdBy0h6t9e6U+3fMee29KZMqXahiVkT8PuTM8+ugaHoQ==",
+  "success": true,
+  "projectFilePath": "/home/calista/Desktop/Calista/GodotProjects/GravityHook/GravityHook.csproj",
+  "expectedPackageFiles": [
+    "/home/calista/.nuget/packages/microsoft.netframework.referenceassemblies/1.0.0/microsoft.netframework.referenceassemblies.1.0.0.nupkg.sha512",
+    "/home/calista/.nuget/packages/microsoft.netframework.referenceassemblies.net472/1.0.0/microsoft.netframework.referenceassemblies.net472.1.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}

@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/zapsplat_multimedia_game_tone_short_bright_futuristic_beep_with_delay_action_tone_001_59162.ogg-aee3b20b80f0f8b540f4440cffb9dd80.oggstr"
+
+[deps]
+
+source_file="res://Musics/zapsplat_multimedia_game_tone_short_bright_futuristic_beep_with_delay_action_tone_001_59162.ogg"
+dest_files=[ "res://.import/zapsplat_multimedia_game_tone_short_bright_futuristic_beep_with_delay_action_tone_001_59162.ogg-aee3b20b80f0f8b540f4440cffb9dd80.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

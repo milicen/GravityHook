@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/zapsplat_multimedia_game_error_tone_001_24919.ogg-1cb6ffa300dbd5149ae2e19908256557.oggstr"
+
+[deps]
+
+source_file="res://Musics/zapsplat_multimedia_game_error_tone_001_24919.ogg"
+dest_files=[ "res://.import/zapsplat_multimedia_game_error_tone_001_24919.ogg-1cb6ffa300dbd5149ae2e19908256557.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

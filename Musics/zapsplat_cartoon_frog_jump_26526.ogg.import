@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/zapsplat_cartoon_frog_jump_26526.ogg-e1994ebb7376ee3fb091cf429a9fce4e.oggstr"
+
+[deps]
+
+source_file="res://Musics/zapsplat_cartoon_frog_jump_26526.ogg"
+dest_files=[ "res://.import/zapsplat_cartoon_frog_jump_26526.ogg-e1994ebb7376ee3fb091cf429a9fce4e.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0
